@@ -25,3 +25,4 @@ urlpatterns = [
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 handler404 = "shop.views.error_404_view"
+handler500 = "shop.views.error_500_view"
