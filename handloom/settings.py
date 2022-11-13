@@ -35,6 +35,7 @@ ALLOWED_HOSTS = ["garghandloom.herokuapp.com", "*"]
 # Application definition
 
 INSTALLED_APPS = [
+    "clearcache",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
