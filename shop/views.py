@@ -4,8 +4,8 @@ from django.views.decorators.csrf import csrf_exempt
 from .models import Testimonial, Product
 from django.views.generic import View
 from django.shortcuts import render
+from django.core.cache import cache
 from django.conf import settings
-from django.core import cache
 
 decorators = [csrf_exempt]
 is_production = not settings.DEBUG
