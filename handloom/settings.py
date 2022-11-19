@@ -35,7 +35,9 @@ ALLOWED_HOSTS = ["garghandloom.herokuapp.com", "*"]
 # Application definition
 
 INSTALLED_APPS = [
+    "robots",
     "clearcache",
+    "django.contrib.sites",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -45,7 +47,10 @@ INSTALLED_APPS = [
     "shop.apps.ShopConfig",
 ]
 
+SITE_ID = 1
+
 MIDDLEWARE = [
+    "django.middleware.gzip.GZipMiddleware",
     "django.middleware.security.SecurityMiddleware",
     'whitenoise.middleware.WhiteNoiseMiddleware',
     "django.contrib.sessions.middleware.SessionMiddleware",

@@ -7,7 +7,7 @@
         <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img class="w-100" src="{% static 'shop/img/c1.webp' %}" alt="Image">
+                    <img class="w-100" src="{% static 'shop/img/c1.webp' %}" alt="carousel" loading="lazy">
                     <div class="carousel-caption">
                         <div class="container">
                             <div class="row justify-content-start">
@@ -39,7 +39,7 @@
             <div class="row g-5 align-items-center">
                 <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
                     <div class="about-img position-relative overflow-hidden p-5 pe-0">
-                        <img class="img-fluid w-100" src="{% static 'shop/img/about.jpg' %}">
+                        <img class="img-fluid w-100" src="{% static 'shop/img/about.jpg' %}" alt="about" loading="lazy">
                     </div>
                 </div>
 
@@ -66,7 +66,7 @@
             <div class="row g-4">
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="bg-white text-center h-100 p-4 p-xl-5">
-                        <img class="img-fluid mb-4" src="{% static 'shop/img/icon-1.png' %}" alt="">
+                        <img class="img-fluid mb-4" src="{% static 'shop/img/icon-1.png' %}" alt="feature1" loading="lazy">
                         <h4 class="mb-3">Best Quality</h4>
                         <p class="mb-4">We only select those products which are build through a really best quality material.</p>
                     </div>
@@ -74,7 +74,7 @@
 
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="bg-white text-center h-100 p-4 p-xl-5">
-                        <img class="img-fluid mb-4" src="{% static 'shop/img/icon-2.png' %}" alt="">
+                        <img class="img-fluid mb-4" src="{% static 'shop/img/icon-2.png' %}" alt="feature2" loading="lazy">
                         <h4 class="mb-3">Reasonable Prices</h4>
                         <p class="mb-4">We value our customers money that is why we always try to set prices cheaper as much we can.</p>
                     </div>
@@ -82,7 +82,7 @@
 
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
                     <div class="bg-white text-center h-100 p-4 p-xl-5">
-                        <img class="img-fluid mb-4" src="{% static 'shop/img/icon-3.png' %}" alt="">
+                        <img class="img-fluid mb-4" src="{% static 'shop/img/icon-3.png' %}" alt="feature3" loading="lazy">
                         <h4 class="mb-3">No Complaints</h4>
                         <p class="mb-4">We respect & value our customers time and emotions so that we don't want to give chance of any complain to our customer.</p>
                     </div>
@@ -106,15 +106,15 @@
                 <div class="col-lg-6 text-start text-lg-end wow slideInRight" data-wow-delay="0.1s">
                     <ul class="nav nav-pills d-inline-flex justify-content-end mb-5">
                         <li class="nav-item me-2">
-                            <a class="btn btn-outline-primary border-2 active" data-bs-toggle="pill" href="#tab-1">Curtains</a>
+                            <a class="btn btn-outline-primary border-2 active" data-bs-toggle="pill" href="#tab-1" aria-label="Curtains">Curtains</a>
                         </li>
 
                         <li class="nav-item me-2">
-                            <a class="btn btn-outline-primary border-2" data-bs-toggle="pill" href="#tab-2">Carpets</a>
+                            <a class="btn btn-outline-primary border-2" data-bs-toggle="pill" href="#tab-2" aria-label="Carpets">Carpets</a>
                         </li>
 
                         <li class="nav-item me-0">
-                            <a class="btn btn-outline-primary border-2" data-bs-toggle="pill" href="#tab-3">Blankets</a>
+                            <a class="btn btn-outline-primary border-2" data-bs-toggle="pill" href="#tab-3" aria-label="Blankets">Blankets</a>
                         </li>
                     </ul>
                 </div>
@@ -128,12 +128,12 @@
                                 <div class="col-xl-3 col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                                     <div class="product-item">
                                         <div class="position-relative bg-light overflow-hidden">
-                                            <img class="img-fluid w-100" src="{{product.image}}" alt="">
+                                            <img class="img-fluid w-100" src="{{product.image}}" alt="tab_1_product_{{forloop.counter}}" loading="lazy">
                                             <div class="bg-secondary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">New</div>
                                         </div>
 
                                         <div class="text-center p-4">
-                                            <a class="d-block h5 mb-2" href="#">{{product.name}}</a>
+                                            <a class="d-block h5 mb-2" href="#" aria-label="tab_1_product_{{forloop.counter}}">{{product.name}}</a>
                                         </div>
                                     </div>
                                 </div>
@@ -149,12 +149,12 @@
                                 <div class="col-xl-3 col-lg-4 col-md-6">
                                     <div class="product-item">
                                         <div class="position-relative bg-light overflow-hidden">
-                                            <img class="img-fluid w-100" src="{{product.image}}" alt="">
+                                            <img class="img-fluid w-100" src="{{product.image}}" alt="tab_2_product_{{forloop.counter}}" loading="lazy">
                                             <div class="bg-secondary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">New</div>
                                         </div>
 
                                         <div class="text-center p-4">
-                                            <a class="d-block h5 mb-2" href="#">{{product.name}}</a>
+                                            <a class="d-block h5 mb-2" href="#" aria-label="tab_2_product_{{forloop.counter}}">{{product.name}}</a>
                                         </div>
                                     </div>
                                 </div>
@@ -170,12 +170,12 @@
                                 <div class="col-xl-3 col-lg-4 col-md-6">
                                     <div class="product-item">
                                         <div class="position-relative bg-light overflow-hidden">
-                                            <img class="img-fluid w-100" src="{{product.image}}" alt="">
+                                            <img class="img-fluid w-100" src="{{product.image}}" alt="tab_3_product_{{forloop.counter}}" loading="lazy">
                                             <div class="bg-secondary rounded text-white position-absolute start-0 top-0 m-4 py-1 px-3">New</div>
                                         </div>
 
                                         <div class="text-center p-4">
-                                            <a class="d-block h5 mb-2" href="#">{{product.name}}</a>
+                                            <a class="d-block h5 mb-2" href="#" aria-label="tab_3_product_{{forloop.counter}}">{{product.name}}</a>
                                         </div>
                                     </div>
                                 </div>
@@ -199,7 +199,7 @@
                 </div>
 
                 <div class="col-md-5 text-md-end wow fadeIn" data-wow-delay="0.5s">
-                    <a class="btn btn-lg btn-secondary rounded-pill py-3 px-5" href="https://goo.gl/maps/23rG7952mfEDxUdx5">Visit Now</a>
+                    <a class="btn btn-lg btn-secondary rounded-pill py-3 px-5" href="https://goo.gl/maps/23rG7952mfEDxUdx5" aria-label="Visit Now">Visit Now</a>
                 </div>
             </div>
         </div>
@@ -221,7 +221,7 @@
                         <p class="mb-4">{{testimonial.message}}</p>
 
                         <div class="d-flex align-items-center">
-                            <img class="flex-shrink-0 rounded-circle" src="{% static 'shop/img/testimonial-1.jpg' %}" alt="">
+                            <img class="flex-shrink-0 rounded-circle" src="{% static 'shop/img/testimonial-1.jpg' %}" alt="testimonial_{{forloop.counter}}" loading="lazy">
 
                             <div class="ms-3">
                                 <h5 class="mb-1">{{testimonial.name}}</h5>

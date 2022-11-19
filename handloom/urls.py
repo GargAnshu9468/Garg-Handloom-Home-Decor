@@ -20,6 +20,7 @@ from django.contrib import admin
 from django.conf import settings
 
 urlpatterns = [
+    path("robots.txt", include("robots.urls")),
     path("admin/clearcache/", include("clearcache.urls")),
     path("admin/", admin.site.urls),
     path("", include("shop.urls")),
