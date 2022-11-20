@@ -8,7 +8,7 @@ from django.core.cache import cache
 from django.conf import settings
 
 decorators = [csrf_exempt]
-is_production = not settings.DEBUG
+is_production = settings.IS_PRODUCTION
 
 if is_production:
     decorators = [csrf_exempt, cache_page(86400)]

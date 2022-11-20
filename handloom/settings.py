@@ -30,6 +30,8 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = eval(os.environ.get("DEBUG"))
 
+IS_PRODUCTION = not DEBUG
+
 ALLOWED_HOSTS = ["garghandloom.herokuapp.com", "*"]
 
 # Application definition
@@ -61,7 +63,7 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 
-if not DEBUG:
+if IS_PRODUCTION:
     MIDDLEWARE.insert(2, "django.middleware.cache.UpdateCacheMiddleware")
     MIDDLEWARE.insert(4, "django.middleware.cache.FetchFromCacheMiddleware")
 
@@ -147,7 +149,7 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 # Cache Configurations
 
-if not DEBUG:
+if IS_PRODUCTION:
     CACHE_MIDDLEWARE_SECONDS = 86400
 
     CACHES = {
