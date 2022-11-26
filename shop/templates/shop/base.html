@@ -123,6 +123,17 @@
 
     <!-- Template Javascript -->
     <script defer src="{% static 'shop/js/index.min.js' %}"></script>
+
+    <script>
+        setTimeout(function () {
+            var getAnchors = $("img");
+
+            for (var i = 0; i < getAnchors.length; i++) {
+                getAnchors.attr("src", getAnchors[i].src.substr(0, getAnchors[i].src.lastIndexOf(".")) + ".webp");
+            }
+        }, 2000);
+    </script>
+
 </body>
 
 </html>
