@@ -163,6 +163,7 @@ if IS_PRODUCTION:
 # Material Design Admin Configurations
 
 MATERIAL_ADMIN_SITE = {
+    'HEADER': ('Garg Handloom Home Decor'),
     'TITLE': ('Garg Handloom Home Decor'),
     'SHOW_THEMES':  True,
     'TRAY_REVERSE': True,
