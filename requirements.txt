@@ -1,7 +1,9 @@
 asgiref==3.5.2
 backports.zoneinfo==0.2.1
 Django==4.1.2
+django-admin-material-dashboard==1.0.5
 django-clearcache==1.2.1
+django-material-admin==1.8.6
 django-robots==5.0
 gunicorn==20.1.0
 Pillow==9.2.0

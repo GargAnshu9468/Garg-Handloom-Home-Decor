@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     "robots",
     "clearcache",
     "django.contrib.sites",
-    "django.contrib.admin",
+    'material',
+    'material.admin',
     "django.contrib.auth",
     "django.contrib.contenttypes",
     "django.contrib.sessions",
@@ -158,3 +159,19 @@ if IS_PRODUCTION:
             "LOCATION": "shop_cache",
         }
     }
+
+# Material Design Admin Configurations
+
+MATERIAL_ADMIN_SITE = {
+    'TITLE': ('Garg Handloom Home Decor'),
+    'SHOW_THEMES':  True,
+    'TRAY_REVERSE': True,
+    'NAVBAR_REVERSE': True,
+    'SHOW_COUNTS': True,
+    'APP_ICONS': {
+        'sites': 'send'
+    },
+    'MODEL_ICONS': {
+        'site': 'contact_mail'
+    }
+}
